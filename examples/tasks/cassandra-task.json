@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "schedule": {
+        "type": "simple",
+        "interval": "1s"
+    },
+    "workflow": {
+        "collect": {
+            "metrics": {
+                "/intel/cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/ValidationExecutor/name/MaxPoolSize/*": {},
+		        "/intel/cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/Keyspace/keyspace/system/name/TombstoneScannedHistogram/*": {},
+                "/intel/cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/Keyspace/keyspace/system/name/BloomFilterOffHeapMemoryUsed/*": {},
+                "/intel/cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/Keyspace/keyspace/system_auth/name/ReadLatency/*": {},
+                "/intel/cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/DroppedMessage/scope/READ/name/Dropped/*": {}
+            },
+            "config": {},
+            "process": [
+                {
+                    "plugin_name": "passthru",
+                    "process": null,
+                    "publish": [
+                        {                         
+                            "plugin_name": "file",
+                            "config": {
+                                "file": "/tmp/collected_cassandra"
+                            }
+                        }
+                    ],
+                    "config": null
+                }
+            ],
+            "publish": null
+        }
+    }
+}
