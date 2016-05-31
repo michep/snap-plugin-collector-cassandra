@@ -32,8 +32,8 @@ import (
 func TestESPlugin(t *testing.T) {
 	Convey("Meta should return metadata for the plugin", t, func() {
 		meta := Meta()
-		So(meta.Name, ShouldResemble, name)
-		So(meta.Version, ShouldResemble, version)
+		So(meta.Name, ShouldResemble, Name)
+		So(meta.Version, ShouldResemble, Version)
 		So(meta.Type, ShouldResemble, plugin.CollectorPluginType)
 	})
 

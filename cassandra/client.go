@@ -31,16 +31,16 @@ import (
 )
 
 const (
-	metricQuery    = "/serverbydomain?querynames=org.apache.cassandra.metrics:*&template=identity"
-	mbeanQuery     = "/mbean?objectname="
-	querySuffix    = "&template=identity"
-	javaStringType = "java.lang.String"
+	MetricQuery    = "/serverbydomain?querynames=org.apache.cassandra.metrics:*&template=identity"
+	MbeanQuery     = "/mbean?objectname="
+	QuerySuffix    = "&template=identity"
+	JavaStringType = "java.lang.String"
 
-	emptyRespErr        = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
-	readDocErr          = "Read document error"
-	queryDocErr         = "Queried document not found"
-	emptyNamespaceErr   = "To be collected metric namespace is empty"
-	invalidNamespaceErr = "To be collected metric namespace is invalid"
+	EmptyRespErr        = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+	ReadDocErr          = "Read document error"
+	QueryDocErr         = "Queried document not found"
+	EmptyNamespaceErr   = "To be collected metric namespace is empty"
+	InvalidNamespaceErr = "To be collected metric namespace is invalid"
 )
 
 var (
@@ -88,14 +88,14 @@ type CassClient struct {
 // NewCassClient returns a new instance of CassClient
 func NewCassClient(url, host string) *CassClient {
 	return &CassClient{
-		client: NewHTTPClient(url, "", timeout),
+		client: NewHTTPClient(url, "", DefaultTimeout),
 		host:   host,
 	}
 }
 
 // getMetricType returns all available metric types. It exits if a fatal error occurs.
-func (cc *CassClient) getMetricType() []plugin.PluginMetricType {
-	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + metricQuery)
+func (cc *CassClient) getMetricType() []plugin.MetricType {
+	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + MetricQuery)
 	if err != nil {
 		log.Fatal(err.Error())
 	}
@@ -105,21 +105,21 @@ func (cc *CassClient) getMetricType() []plugin.PluginMetricType {
 		log.Fatal(err.Error())
 	}
 
-	mtsType := []plugin.PluginMetricType{}
+	mtsType := []plugin.MetricType{}
 	for _, mbean := range mbeans {
 		ns := []string{"intel", "cassandra", "node", cc.host}
 		ns = append(ns, makeNamespace(mbean.Objectname, "*")...)
 
-		mtsType = append(mtsType, plugin.PluginMetricType{
-			Namespace_: ns,
-			Labels_:    []core.Label{{Index: len(ns) - 1, Name: "details"}}})
+		mtsType = append(mtsType, plugin.MetricType{
+			Namespace_: core.NewNamespace(ns...),
+		})
 	}
 	return mtsType
 }
 
 // getData returns a list of collected metrics giving namespaces.
 // It logs invalid URLs(namespaces) but ignores the errors.
-func (cc *CassClient) getData(ns []string) ([]plugin.PluginMetricType, error) {
+func (cc *CassClient) getData(ns []string) ([]plugin.MetricType, error) {
 	url, err := cc.getQueryURL(ns)
 	if err != nil {
 		return nil, err
@@ -127,30 +127,30 @@ func (cc *CassClient) getData(ns []string) ([]plugin.PluginMetricType, error) {
 	return cc.worker(url)
 }
 
-func (cc *CassClient) worker(url string) ([]plugin.PluginMetricType, error) {
-	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + mbeanQuery + url + querySuffix)
+func (cc *CassClient) worker(url string) ([]plugin.MetricType, error) {
+	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + MbeanQuery + url + QuerySuffix)
 	if err != nil {
 		cassLog.WithFields(log.Fields{
 			"_block": "worker",
 			"error":  err,
-		}).Error(readDocErr)
+		}).Error(ReadDocErr)
 		return nil, err
 	}
 	defer resp.Body.Close()
 
 	contents, err := ioutil.ReadAll(resp.Body)
-	if err != nil || string(contents) == emptyRespErr {
+	if err != nil || string(contents) == EmptyRespErr {
 		cassLog.WithFields(log.Fields{
 			"_block": "worker",
 			"error":  err,
-		}).Error(queryDocErr)
-		return nil, errors.New(queryDocErr)
+		}).Error(QueryDocErr)
+		return nil, errors.New(QueryDocErr)
 	}
 
 	attrs, _ := readAttrbutes(resp.Body)
-	mts := []plugin.PluginMetricType{}
+	mts := []plugin.MetricType{}
 	for _, attr := range attrs {
-		if attr.Type != javaStringType {
+		if attr.Type != JavaStringType {
 			mts = append(mts, cc.buildMetric(attr.Name, url, attr.Value))
 		}
 	}
@@ -162,15 +162,15 @@ func (cc *CassClient) getQueryURL(ns []string) (string, error) {
 	if len(ns) == 0 || len(ns) < 6 {
 		cassLog.WithFields(log.Fields{
 			"_block": "getUrl",
-			"error":  errors.New(invalidNamespaceErr),
-		}).Error(emptyNamespaceErr)
-		return "", errors.New(invalidNamespaceErr)
+			"error":  errors.New(InvalidNamespaceErr),
+		}).Error(EmptyNamespaceErr)
+		return "", errors.New(InvalidNamespaceErr)
 	} else if ns[0] != "intel" && ns[1] != "cassandra" && ns[2] != "node" && ns[4] != "org.apache.cassandra.metrics" {
 		cassLog.WithFields(log.Fields{
 			"_block": "getUrl",
-			"error":  errors.New(invalidNamespaceErr + strings.Join(ns, "/")),
+			"error":  errors.New(InvalidNamespaceErr + strings.Join(ns, "/")),
 		}).Error("To be collected metric namespace is invalid")
-		return "", errors.New(invalidNamespaceErr)
+		return "", errors.New(InvalidNamespaceErr)
 	}
 
 	// Builds MX4J query URL and
@@ -183,12 +183,12 @@ func (cc *CassClient) getQueryURL(ns []string) (string, error) {
 	return url, nil
 }
 
-func (cc *CassClient) buildMetric(name, url string, value float64) plugin.PluginMetricType {
+func (cc *CassClient) buildMetric(name, url string, value float64) plugin.MetricType {
 	ns := makeNamespace(url, name)
-	mts := plugin.PluginMetricType{
-		Namespace_: ns,
+	mts := plugin.MetricType{
+		Namespace_: core.NewNamespace(ns...),
 		Data_:      value,
-		Source_:    cc.host,
+		Tags_:      map[string]string{"cassHost": cc.host},
 		Timestamp_: time.Now(),
 	}
 	return mts
