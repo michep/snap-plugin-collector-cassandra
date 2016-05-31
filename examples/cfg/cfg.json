@@ -1,7 +1,5 @@
 {
   "control": {
-    "cache_expiration": "5s",
-    "max_running_plugins": 5,
     "plugins": {
       "collector": {
         "cassandra": {

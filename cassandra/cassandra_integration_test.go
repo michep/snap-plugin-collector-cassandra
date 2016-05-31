@@ -27,6 +27,7 @@ import (
 	"testing"
 
 	"github.com/intelsdi-x/snap/control/plugin"
+	"github.com/intelsdi-x/snap/core"
 	"github.com/intelsdi-x/snap/core/cdata"
 	"github.com/intelsdi-x/snap/core/ctypes"
 	. "github.com/smartystreets/goconvey/convey"
@@ -48,36 +49,36 @@ func TestCassandraCollectMetrics(t *testing.T) {
 		p.GetMetricTypes(cfg)
 
 		Convey("collect multiple metrics", func() {
-			mts := []plugin.PluginMetricType{
-				plugin.PluginMetricType{
-					Namespace_: []string{"intel", "cassandra", "node", hostname,
+			mts := []plugin.MetricType{
+				plugin.MetricType{
+					Namespace_: core.NewNamespace("intel", "cassandra", "node", hostname,
 						"org.apache.cassandra.metrics", "type", "ThreadPools", "path", "internal", "scope", "ValidationExecutor",
-						"name", "MaxPoolSize", "Value"},
+						"name", "MaxPoolSize", "Value"),
 					Config_: cfg.ConfigDataNode,
 				},
-				plugin.PluginMetricType{
-					Namespace_: []string{"intel", "cassandra", "node", hostname,
+				plugin.MetricType{
+					Namespace_: core.NewNamespace("intel", "cassandra", "node", hostname,
 						"org.apache.cassandra.metrics", "type", "Keyspace", "keyspace", "system", "name", "TombstoneScannedHistogram",
-						"Max"},
+						"Max"),
 					Config_: cfg.ConfigDataNode,
 				},
-				plugin.PluginMetricType{
-					Namespace_: []string{"intel", "cassandra", "node", hostname,
+				plugin.MetricType{
+					Namespace_: core.NewNamespace("intel", "cassandra", "node", hostname,
 						"org.apache.cassandra.metrics", "type", "Keyspace", "keyspace", "system", "name", "BloomFilterOffHeapMemoryUsed",
-						"Value"},
+						"Value"),
 					Config_: cfg.ConfigDataNode,
 				},
-				plugin.PluginMetricType{
-					Namespace_: []string{"intel", "cassandra", "node", hostname,
+				plugin.MetricType{
+					Namespace_: core.NewNamespace("intel", "cassandra", "node", hostname,
 						"org.apache.cassandra.metrics", "type", "Keyspace", "keyspace", "system_auth", "name", "ReadLatency",
-						"75thPercentile"},
+						"75thPercentile"),
 					Config_: cfg.ConfigDataNode,
 				},
 
-				plugin.PluginMetricType{
-					Namespace_: []string{"intel", "cassandra", "node", hostname,
+				plugin.MetricType{
+					Namespace_: core.NewNamespace("intel", "cassandra", "node", hostname,
 						"org.apache.cassandra.metrics", "type", "Cache", "scope", "RowCache", "name",
-						"Hits", "*"},
+						"Hits", "*"),
 					Config_: cfg.ConfigDataNode,
 				},
 			}
@@ -87,11 +88,11 @@ func TestCassandraCollectMetrics(t *testing.T) {
 		})
 
 		Convey("collect a metric with a wrong namespace", func() {
-			mts := []plugin.PluginMetricType{
-				plugin.PluginMetricType{
-					Namespace_: []string{"node", hostname,
+			mts := []plugin.MetricType{
+				plugin.MetricType{
+					Namespace_: core.NewNamespace("node", hostname,
 						"org.apache.cassandra.metrics", "type", "ThreadPools", "path", "internal", "scope", "ValidationExecutor",
-						"name", "MaxPoolSize", "Value"},
+						"name", "MaxPoolSize", "Value"),
 					Config_: cfg.ConfigDataNode,
 				},
 			}
@@ -101,9 +102,9 @@ func TestCassandraCollectMetrics(t *testing.T) {
 		})
 
 		Convey("collect a metric with an empty namespace", func() {
-			mts := []plugin.PluginMetricType{
-				plugin.PluginMetricType{
-					Namespace_: []string{},
+			mts := []plugin.MetricType{
+				plugin.MetricType{
+					Namespace_: core.NewNamespace(""),
 					Config_:    cfg.ConfigDataNode,
 				},
 			}
@@ -113,16 +114,16 @@ func TestCassandraCollectMetrics(t *testing.T) {
 		})
 
 		Convey("collect a metric with a not found namespace", func() {
-			mts := []plugin.PluginMetricType{
-				plugin.PluginMetricType{
-					Namespace_: []string{"intel", "cassandra", "node", hostname,
-						"org.apache.cassandra.metrics", "type", "abc"},
+			mts := []plugin.MetricType{
+				plugin.MetricType{
+					Namespace_: core.NewNamespace("intel", "cassandra", "node", hostname,
+						"org.apache.cassandra.metrics", "type", "abc"),
 					Config_: cfg.ConfigDataNode,
 				},
-				plugin.PluginMetricType{
-					Namespace_: []string{"intel", "cassandra", "node", hostname,
+				plugin.MetricType{
+					Namespace_: core.NewNamespace("intel", "cassandra", "node", hostname,
 						"org.apache.cassandra.metrics", "type, Keyspace", "keyspace", "system_auth", "name", "ReadLatency",
-						"90thPercentile"},
+						"90thPercentile"),
 					Config_: cfg.ConfigDataNode,
 				},
 			}
@@ -134,10 +135,10 @@ func TestCassandraCollectMetrics(t *testing.T) {
 	})
 }
 
-func setupCfg(url, hostname string, port int) plugin.PluginConfigType {
+func setupCfg(url, hostname string, port int) plugin.ConfigType {
 	node := cdata.NewNode()
 	node.AddItem("url", ctypes.ConfigValueStr{Value: url})
 	node.AddItem("hostname", ctypes.ConfigValueStr{Value: hostname})
 	node.AddItem("port", ctypes.ConfigValueInt{Value: port})
-	return plugin.PluginConfigType{ConfigDataNode: node}
+	return plugin.ConfigType{ConfigDataNode: node}
 }

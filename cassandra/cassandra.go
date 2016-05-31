@@ -20,7 +20,7 @@ package cassandra
 
 import (
 	"errors"
-	"strconv"
+	"fmt"
 	"time"
 
 	"github.com/intelsdi-x/snap-plugin-utilities/config"
@@ -30,45 +30,46 @@ import (
 
 const (
 	// Name of plugin
-	name = "cassandra"
+	Name = "cassandra"
 	// Version of plugin
-	version = 1
+	Version = 2
 	// Type of plugin
-	pluginType = plugin.CollectorPluginType
+	PluginType = plugin.CollectorPluginType
 
 	// Timeout duration
-	timeout = 5 * time.Second
+	DefaultTimeout = 5 * time.Second
 
-	cassURL    = "url"
-	port       = "port"
-	hostname   = "hostname"
-	invalidURL = "Invalid URL in Global configuration"
-	noHostname = "No hostname define in Global configuration"
+	CassURL    = "url"
+	Port       = "port"
+	Hostname   = "hostname"
+	InvalidURL = "Invalid URL in Global configuration"
+	NoHostname = "No hostname define in Global configuration"
 )
 
 // Meta returns the snap plug.PluginMeta type
 func Meta() *plugin.PluginMeta {
-	return plugin.NewPluginMeta(name, version, pluginType, []string{plugin.SnapGOBContentType}, []string{plugin.SnapGOBContentType})
+	return plugin.NewPluginMeta(Name, Version, PluginType, []string{plugin.SnapGOBContentType}, []string{plugin.SnapGOBContentType})
 }
 
-//  NewCassandraCollector returns a new instance of Cassandra struct
+// NewCassandraCollector returns a new instance of Cassandra struct
 func NewCassandraCollector() *Cassandra {
 	return &Cassandra{}
 }
 
+// Cassandra struct
 type Cassandra struct {
 }
 
 // CollectMetrics collects metrics from Cassandra through JMX
-func (p *Cassandra) CollectMetrics(mts []plugin.PluginMetricType) ([]plugin.PluginMetricType, error) {
-	metrics := []plugin.PluginMetricType{}
+func (p *Cassandra) CollectMetrics(mts []plugin.MetricType) ([]plugin.MetricType, error) {
+	metrics := []plugin.MetricType{}
 	client, err := initClient(mts[0])
 	if err != nil {
 		return nil, err
 	}
 
 	for _, m := range mts {
-		dpt, err := client.getData(m.Namespace())
+		dpt, err := client.getData(m.Namespace().Strings())
 		if err != nil {
 			return nil, err
 		}
@@ -78,7 +79,7 @@ func (p *Cassandra) CollectMetrics(mts []plugin.PluginMetricType) ([]plugin.Plug
 }
 
 // GetMetricTypes returns the metric types exposed by Elasticsearch
-func (p *Cassandra) GetMetricTypes(cfg plugin.PluginConfigType) ([]plugin.PluginMetricType, error) {
+func (p *Cassandra) GetMetricTypes(cfg plugin.ConfigType) ([]plugin.MetricType, error) {
 	client, err := initClient(cfg)
 	if err != nil {
 		return nil, err
@@ -94,23 +95,23 @@ func (p *Cassandra) GetConfigPolicy() (*cpolicy.ConfigPolicy, error) {
 }
 
 func initClient(cfg interface{}) (*CassClient, error) {
-	items, err := config.GetConfigItems(cfg, []string{cassURL, port, hostname})
+	items, err := config.GetConfigItems(cfg, CassURL, Port, Hostname)
 	if err != nil {
 		return nil, err
 	}
 
-	url := items[cassURL].(string)
-	hostname := items[hostname].(string)
-	port := items[port].(int)
+	url := items[CassURL].(string)
+	hostname := items[Hostname].(string)
+	port := items[Port].(int)
 
 	if url == "" {
-		return nil, errors.New(invalidURL)
+		return nil, errors.New(InvalidURL)
 	}
 	if hostname == "" {
-		return nil, errors.New(noHostname)
+		return nil, errors.New(NoHostname)
 	}
 
-	server := url + ":" + strconv.Itoa(port)
+	server := fmt.Sprintf("%s:%d", url, port)
 
-	return NewCassClient(server, hostname), nil
+	return NewCassClient(server, Hostname), nil
 }
