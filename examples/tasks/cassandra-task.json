@@ -7,13 +7,16 @@
     "workflow": {
         "collect": {
             "metrics": {
-                "/intel/cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/ValidationExecutor/name/MaxPoolSize/*": {},
-		        "/intel/cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/Keyspace/keyspace/system/name/TombstoneScannedHistogram/*": {},
-                "/intel/cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/Keyspace/keyspace/system/name/BloomFilterOffHeapMemoryUsed/*": {},
-                "/intel/cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/Keyspace/keyspace/system_auth/name/ReadLatency/*": {},
-                "/intel/cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/DroppedMessage/scope/READ/name/Dropped/*": {}
+                "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/name/*/Value":{},
+                "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/50thPercentile": {},
+                "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/Max":{}
             },
-            "config": {},
+            "config": {
+                "/intel/cassandra": {
+                    "url": "192.168.99.100",
+                    "port": 8082
+                }
+            },
             "process": [
                 {
                     "plugin_name": "passthru",
@@ -25,11 +28,9 @@
                                 "file": "/tmp/collected_cassandra"
                             }
                         }
-                    ],
-                    "config": null
+                    ]
                 }
-            ],
-            "publish": null
+            ]
         }
     }
 }

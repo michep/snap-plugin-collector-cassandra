@@ -19,20 +19,22 @@ limitations under the License.
 package cassandra
 
 import (
-	"errors"
-	"fmt"
+	"reflect"
+	"strings"
 	"time"
 
-	"github.com/intelsdi-x/snap-plugin-utilities/config"
 	"github.com/intelsdi-x/snap/control/plugin"
 	"github.com/intelsdi-x/snap/control/plugin/cpolicy"
+	"github.com/intelsdi-x/snap/core"
+	"github.com/intelsdi-x/snap/core/cdata"
 )
 
+// const defines constant varaibles
 const (
 	// Name of plugin
 	Name = "cassandra"
 	// Version of plugin
-	Version = 2
+	Version = 3
 	// Type of plugin
 	PluginType = plugin.CollectorPluginType
 
@@ -58,34 +60,44 @@ func NewCassandraCollector() *Cassandra {
 
 // Cassandra struct
 type Cassandra struct {
+	client *CassClient
 }
 
 // CollectMetrics collects metrics from Cassandra through JMX
 func (p *Cassandra) CollectMetrics(mts []plugin.MetricType) ([]plugin.MetricType, error) {
 	metrics := []plugin.MetricType{}
-	client, err := initClient(mts[0])
-	if err != nil {
-		return nil, err
-	}
 
-	for _, m := range mts {
-		dpt, err := client.getData(m.Namespace().Strings())
+	if p.client == nil {
+		err := p.loadMetricAPI(mts[0].Config())
 		if err != nil {
 			return nil, err
 		}
-		metrics = append(metrics, dpt...)
 	}
+
+	for _, m := range mts {
+		results := []nodeData{}
+		search := strings.Split(replaceUnderscoreToDot(strings.TrimLeft(m.Namespace().String(), "/")), "/")
+		if len(search) > 3 {
+			p.client.Root.Get(p.client.client.GetUrl(), search[4:], 0, &results)
+		}
+
+		for _, result := range results {
+			ns := append([]string{"intel", "cassandra", "node", p.client.host}, strings.Split(result.Path, Slash)...)
+			metrics = append(metrics, plugin.MetricType{
+				Namespace_: core.NewNamespace(ns...),
+				Timestamp_: time.Now(),
+				Data_:      result.Data,
+				Unit_:      reflect.TypeOf(result.Data).String(),
+			})
+		}
+	}
+
 	return metrics, nil
 }
 
-// GetMetricTypes returns the metric types exposed by Elasticsearch
+// GetMetricTypes returns the metric types exposed by Cassandra
 func (p *Cassandra) GetMetricTypes(cfg plugin.ConfigType) ([]plugin.MetricType, error) {
-	client, err := initClient(cfg)
-	if err != nil {
-		return nil, err
-	}
-	metricTypes := client.getMetricType()
-	return metricTypes, nil
+	return NewEmptyCassClient().getMetricType(cfg)
 }
 
 // GetConfigPolicy returns a ConfigPolicy
@@ -94,24 +106,24 @@ func (p *Cassandra) GetConfigPolicy() (*cpolicy.ConfigPolicy, error) {
 	return c, nil
 }
 
-func initClient(cfg interface{}) (*CassClient, error) {
-	items, err := config.GetConfigItems(cfg, CassURL, Port, Hostname)
+// loadMetricAPI returns the root node
+func (p *Cassandra) loadMetricAPI(config *cdata.ConfigDataNode) error {
+	var err error
+	// inits CassClient
+	p.client, err = initClient(plugin.ConfigType{ConfigDataNode: config})
 	if err != nil {
-		return nil, err
+		return err
 	}
 
-	url := items[CassURL].(string)
-	hostname := items[Hostname].(string)
-	port := items[Port].(int)
-
-	if url == "" {
-		return nil, errors.New(InvalidURL)
+	// reads the root metric node from the memory
+	nod, err := readMetricAPI()
+	if err != nil {
+		err = p.client.buidMetricAPI()
+		if err != nil {
+			return err
+		}
+	} else {
+		p.client.Root = nod
 	}
-	if hostname == "" {
-		return nil, errors.New(NoHostname)
-	}
-
-	server := fmt.Sprintf("%s:%d", url, port)
-
-	return NewCassClient(server, Hostname), nil
+	return nil
 }

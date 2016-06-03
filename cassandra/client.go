@@ -15,6 +15,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
+
 package cassandra
 
 import (
@@ -23,28 +24,17 @@ import (
 	"io"
 	"io/ioutil"
 	"strings"
-	"time"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/intelsdi-x/snap/control/plugin"
-	"github.com/intelsdi-x/snap/core"
 )
 
+// const defines constant varaibles
 const (
 	MetricQuery    = "/serverbydomain?querynames=org.apache.cassandra.metrics:*&template=identity"
 	MbeanQuery     = "/mbean?objectname="
 	QuerySuffix    = "&template=identity"
 	JavaStringType = "java.lang.String"
-
-	EmptyRespErr        = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
-	ReadDocErr          = "Read document error"
-	QueryDocErr         = "Queried document not found"
-	EmptyNamespaceErr   = "To be collected metric namespace is empty"
-	InvalidNamespaceErr = "To be collected metric namespace is invalid"
-)
-
-var (
-	cassLog = log.WithField("_module", "cass-collector-client")
 )
 
 // XMLServer represents Server element
@@ -65,7 +55,7 @@ type XMLMBean struct {
 	Objectname string   `xml:"objectname,attr"`
 }
 
-//XMLAttribute represents list of Attribute elements
+//XMLAttributes represents list of Attribute elements
 type XMLAttributes struct {
 	XMLName    xml.Name       `xml:"MBean"`
 	Attributes []XMLAttribute `xml:"Attribute"`
@@ -83,6 +73,7 @@ type XMLAttribute struct {
 type CassClient struct {
 	client *HTTPClient
 	host   string
+	Root   *node
 }
 
 // NewCassClient returns a new instance of CassClient
@@ -90,48 +81,89 @@ func NewCassClient(url, host string) *CassClient {
 	return &CassClient{
 		client: NewHTTPClient(url, "", DefaultTimeout),
 		host:   host,
+		Root:   &node{Name: Root, Children: map[string]*node{}},
 	}
 }
 
-// getMetricType returns all available metric types. It exits if a fatal error occurs.
-func (cc *CassClient) getMetricType() []plugin.MetricType {
+// NewEmptyCassClient returns an empty instance of CassClient
+func NewEmptyCassClient() *CassClient {
+	return &CassClient{}
+}
+
+// getMetricType returns all available metric types. It reads from
+// CassandraMetricType.json file.It builds metric list only when the file does not exist or it's empty.
+func (cc *CassClient) getMetricType(cfg plugin.ConfigType) ([]plugin.MetricType, error) {
+	types, err := readMetricType()
+	if err != nil {
+		return cc.buildMetricType(cfg)
+	}
+	return types, nil
+}
+
+// buildMetricType builds all metric types and write them into
+// CassandraMetricType.json file.
+func (cc *CassClient) buildMetricType(cfg plugin.ConfigType) ([]plugin.MetricType, error) {
+	cc, err := initClient(cfg)
+	if err != nil {
+		return nil, err
+	}
+
 	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + MetricQuery)
 	if err != nil {
-		log.Fatal(err.Error())
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	mbeans, err := readObjectname(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	nspace := map[string]plugin.MetricType{}
+	for _, mbean := range mbeans {
+		// mbean.Objectname represents each callable measurement
+		ns, _ := cc.getElementTypes(mbean.Objectname)
+		for _, n := range ns {
+			nspace[n.Namespace().String()] = n
+		}
+	}
+
+	mtsType := []plugin.MetricType{}
+	for _, v := range nspace {
+		mtsType = append(mtsType, v)
+	}
+
+	writeMetricTypes(mtsType)
+	return mtsType, nil
+}
+
+// buildMetricAPI builds the base searchable tree and write it
+// into CassandraMetricAPI.json file.
+func (cc *CassClient) buidMetricAPI() error {
+	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + MetricQuery)
+	if err != nil {
+		return err
 	}
 
 	mbeans, err := readObjectname(resp.Body)
 	if err != nil {
-		log.Fatal(err.Error())
+		return err
 	}
 
-	mtsType := []plugin.MetricType{}
 	for _, mbean := range mbeans {
-		ns := []string{"intel", "cassandra", "node", cc.host}
-		ns = append(ns, makeNamespace(mbean.Objectname, "*")...)
-
-		mtsType = append(mtsType, plugin.MetricType{
-			Namespace_: core.NewNamespace(ns...),
-		})
+		nodes := makeLitteralNamespace(mbean.Objectname, "")
+		cc.Root.Add(nodes, 0, mbean.Objectname)
 	}
-	return mtsType
+	writeMetricAPIs(cc.Root)
+	return nil
 }
 
-// getData returns a list of collected metrics giving namespaces.
-// It logs invalid URLs(namespaces) but ignores the errors.
-func (cc *CassClient) getData(ns []string) ([]plugin.MetricType, error) {
-	url, err := cc.getQueryURL(ns)
-	if err != nil {
-		return nil, err
-	}
-	return cc.worker(url)
-}
-
-func (cc *CassClient) worker(url string) ([]plugin.MetricType, error) {
+// getElementTypes returns specific XML element namespace along with its unit
+func (cc *CassClient) getElementTypes(url string) ([]plugin.MetricType, error) {
 	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + MbeanQuery + url + QuerySuffix)
 	if err != nil {
 		cassLog.WithFields(log.Fields{
-			"_block": "worker",
+			"_block": "getTypes",
 			"error":  err,
 		}).Error(ReadDocErr)
 		return nil, err
@@ -141,20 +173,23 @@ func (cc *CassClient) worker(url string) ([]plugin.MetricType, error) {
 	contents, err := ioutil.ReadAll(resp.Body)
 	if err != nil || string(contents) == EmptyRespErr {
 		cassLog.WithFields(log.Fields{
-			"_block": "worker",
+			"_block": "getTypes",
 			"error":  err,
 		}).Error(QueryDocErr)
 		return nil, errors.New(QueryDocErr)
 	}
 
-	attrs, _ := readAttrbutes(resp.Body)
-	mts := []plugin.MetricType{}
+	attrs, _ := readXMLAttrbutes(contents)
+	ns := []plugin.MetricType{}
 	for _, attr := range attrs {
 		if attr.Type != JavaStringType {
-			mts = append(mts, cc.buildMetric(attr.Name, url, attr.Value))
+			ns = append(ns, plugin.MetricType{
+				Namespace_: makeDynamicNamespace(cc.host, url, attr.Name),
+				Unit_:      attr.Type,
+			})
 		}
 	}
-	return mts, nil
+	return ns, nil
 }
 
 // getQueryURL returns the MX4J URL from the giving metric namespace
@@ -183,35 +218,6 @@ func (cc *CassClient) getQueryURL(ns []string) (string, error) {
 	return url, nil
 }
 
-func (cc *CassClient) buildMetric(name, url string, value float64) plugin.MetricType {
-	ns := makeNamespace(url, name)
-	mts := plugin.MetricType{
-		Namespace_: core.NewNamespace(ns...),
-		Data_:      value,
-		Tags_:      map[string]string{"cassHost": cc.host},
-		Timestamp_: time.Now(),
-	}
-	return mts
-}
-
-func makeNamespace(url, name string) []string {
-	ns := []string{}
-
-	sp := strings.Split(url, ":")
-	ns = append(ns, sp[0])
-
-	sp1 := strings.Split(sp[1], ",")
-	for _, s := range sp1 {
-		v := strings.Split(s, "=")
-		ns = append(ns, v...)
-	}
-
-	if name != "" {
-		ns = append(ns, name)
-	}
-	return ns
-}
-
 func readObjectname(reader io.Reader) ([]XMLMBean, error) {
 	var xmlServer XMLServer
 	err := xml.NewDecoder(reader).Decode(&xmlServer)
@@ -221,10 +227,8 @@ func readObjectname(reader io.Reader) ([]XMLMBean, error) {
 	return xmlServer.Domain.MBeans, nil
 }
 
-func readAttrbutes(reader io.Reader) ([]XMLAttribute, error) {
+func readXMLAttrbutes(content []byte) ([]XMLAttribute, error) {
 	var xmlAttributes XMLAttributes
-	if err := xml.NewDecoder(reader).Decode(&xmlAttributes); err != nil {
-		return nil, err
-	}
+	xml.Unmarshal(content, &xmlAttributes)
 	return xmlAttributes.Attributes, nil
 }
