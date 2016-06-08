@@ -65,7 +65,6 @@ You can also download prebuilt binaries for OS X and Linux (64-bit) at the [rele
 * Set up the [snap framework](https://github.com/intelsdi-x/snap/blob/master/README.md#getting-started)
 * Ensure `$SNAP_PATH` is exported  
 `export SNAP_PATH=$GOPATH/src/github.com/intelsdi-x/snap/build`
-* Ensure the global configuration is provided. See [example](#examples) for details.
 
 ## Documentation
 
@@ -90,13 +89,14 @@ View [Metric Types](./METRICS.md). They are in the following catalog:
 * Storage
 * Thread Pool
 
+The dynamic metric queries are supported. You may view the [sample dynamic metrics](./DYNAMIC_METRICS.md).
+
 ### Examples
 Example running snap-plugin-collector-collector, passthru processor, and writing data to a file.
 User need to provide following parameters in the global configuration of the collector.
 
 * `"url"` - The domain URL of cassandra server (ex. `"192.168.99.100"`)
 * `"port"` - The port number of Cassandra MX4J (ex. `"8082"`)
-* `"hostname"` - The host name of Cassandra
 
 Refer to [Sample Gloabal Configuration](./examples/cfg/cfg.json)
 
@@ -121,15 +121,24 @@ See available metrics for your system (this is just part of the list)
 ```
 $SNAP_PATH/bin/snapctl metric list                                
 NAMESPACE 												 VERSIONS
-/intel/Cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/InternalResponseStage/name/MaxPoolSize/Value 					 1
-/intel/Cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/InternalResponseStage/name/PendingTasks/Value 					 1
-/intel/Cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/InternalResponseStage/name/TotalBlockedTasks/Count 				 1
-/intel/Cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/MemtableFlushWriter/name/ActiveTasks/Value 					 1
-/intel/Cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/MemtableFlushWriter/name/CompletedTasks/Value 					 1
-/Intel/Cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/MemtableFlushWriter/name/CurrentlyBlockedTasks/Count 				 1
-/Intel/Cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/MemtableFlushWriter/name/MaxPoolSize/Value 					 1
-/Intel/Cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/MemtableFlushWriter/name/PendingTasks/Value 					 1
-/Intel/Cassandra/Node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/MemtableFlushWriter/name/TotalBlockedTasks/Count 					 1
+```
+/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/scope/*/name/*/999thPercentile 		 3
+/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/scope/*/name/*/99thPercentile 		 3
+/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/scope/*/name/*/Count 			 3
+/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/scope/*/name/*/FifteenMinuteRate 		 3
+/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/scope/*/name/*/FiveMinuteRate 		 3
+/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/scope/*/name/*/Max
+/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/50thPercentile 		 3
+/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/75thPercentile 		 3
+```
+
+$SNAP_PATH/bin/snapctl metric list --verbose
+```
+/intel/cassandra/node/[Node Name]/org_apache_cassandra_metrics/type/[typeValue]/scope/[scopeValue]/name/[nameValue]/FiveMinuteRate 		 		 3 		 double
+/intel/cassandra/node/[Node Name]/org_apache_cassandra_metrics/type/[typeValue]/scope/[scopeValue]/name/[nameValue]/Max 			 		 3 		 double
+/intel/cassandra/node/[Node Name]/org_apache_cassandra_metrics/type/[typeValue]/scope/[scopeValue]/name/[nameValue]/Mean 			 		 3 		 double
+/intel/cassandra/node/[Node Name]/org_apache_cassandra_metrics/type/[typeValue]/scope/[scopeValue]/name/[nameValue]/MeanRate 		 			 3 		 double
+/intel/cassandra/node/[Node Name]/org_apache_cassandra_metrics/type/[typeValue]/scope/[scopeValue]/name/[nameValue]/Min 			 		 3 		 double
 ```
 
 Load passthru plugin for processing:
@@ -165,29 +174,30 @@ Create a task manifest file (e.g. `cassandra-collector-task.json`. replace node 
     "workflow": {
         "collect": {
             "metrics": {
-                "/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/ThreadPools/path/internal/scope/ValidationExecutor/name/MaxPoolSize/*": {},
-                "/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Keyspace/keyspace/system/name/TombstoneScannedHistogram/*": {},
-                "/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Keyspace/keyspace/system/name/BloomFilterOffHeapMemoryUsed/*": {},
-                "/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Keyspace/keyspace/system_auth/name/ReadLatency/*": {},
-                "/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/DroppedMessage/scope/READ/name/Dropped/*": {}
+                "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/name/*/Value":{},
+                "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/50thPercentile": {},
+                "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/Max":{}
             },
-            "config": {},
+            "config": {
+                "/intel/cassandra": {
+                    "url": "192.168.99.100",
+                    "port": 8082
+                }
+            },
             "process": [
                 {
                     "plugin_name": "passthru",
                     "process": null,
                     "publish": [
-                        {
+                        {                         
                             "plugin_name": "file",
                             "config": {
                                 "file": "/tmp/collected_cassandra"
                             }
                         }
-                    ],
-                    "config": null
+                    ]
                 }
-            ],
-            "publish": null
+            ]
         }
     }
 }
@@ -206,17 +216,14 @@ State: Running
 See file output (this is just part of the file):
 ```
 $ tail -f collected_cassandra
-2016-03-10 22:38:14.690001495 -0800 PST|[org.apache.cassandra.metrics type DroppedMessage scope READ name Dropped Count]|0|egu-mac01.lan
-2016-03-10 22:38:14.690018347 -0800 PST|[org.apache.cassandra.metrics type DroppedMessage scope READ name Dropped FiveMinuteRate]|0|egu-mac01.lan
-2016-03-10 22:38:14.690030047 -0800 PST|[org.apache.cassandra.metrics type DroppedMessage scope READ name Dropped OneMinuteRate]|0|egu-mac01.lan
-2016-03-10 22:38:14.690118077 -0800 PST|[org.apache.cassandra.metrics type DroppedMessage scope READ name Dropped FifteenMinuteRate]|0|egu-mac01.lan
-2016-03-10 22:38:14.690130891 -0800 PST|[org.apache.cassandra.metrics type DroppedMessage scope READ name Dropped MeanRate]|0|egu-mac01.lan
-2016-03-10 22:38:14.695199595 -0800 PST|[org.apache.cassandra.metrics type Keyspace keyspace system name BloomFilterOffHeapMemoryUsed Value]|352|egu-mac01.lan
-2016-03-10 22:38:14.700835298 -0800 PST|[org.apache.cassandra.metrics type Keyspace keyspace system name TombstoneScannedHistogram 50thPercentile]|1|egu-mac01.lan
-2016-03-10 22:38:14.700882825 -0800 PST|[org.apache.cassandra.metrics type Keyspace keyspace system name TombstoneScannedHistogram 95thPercentile]|1|egu-mac01.lan
-2016-03-10 22:38:14.700962157 -0800 PST|[org.apache.cassandra.metrics type Keyspace keyspace system name TombstoneScannedHistogram 999thPercentile]|1|egu-mac01.lan
-2016-03-10 22:38:14.700990817 -0800 PST|[org.apache.cassandra.metrics type Keyspace keyspace system name TombstoneScannedHistogram Count]|36|egu-mac01.lan
-2016-03-10 22:38:14.701016028 -0800 PST|[org.apache.cassandra.metrics type Keyspace keyspace system name TombstoneScannedHistogram Mean]|1|egu-mac01.lan
+```
+2016-06-04 10:34:38.477422325 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/RangeLatency/Max|0
+2016-06-04 10:34:38.477423472 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/CasProposeLatency/Max|0
+2016-06-04 10:34:38.47742462 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/TombstoneScannedHistogram/Max|0
+2016-06-04 10:34:38.477425708 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/ReadLatency/Max|0
+2016-06-04 10:34:38.477426822 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/ViewReadTime/Max|0
+2016-06-04 10:34:38.477427958 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/CoordinatorReadLatency/Max|0
+2016-06-04 10:34:38.477439374 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/sc
 ```
 
 ### Roadmap
