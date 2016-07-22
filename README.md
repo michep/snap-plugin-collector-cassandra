@@ -1,10 +1,6 @@
 # snap collector plugin - Cassandra
 
-This plugin collects Cassandra cluster statistics by using snap telemetry engine.
-
-The intention for this plugin is to collect metrics for Cassandra nodes and cluster health.
-
-This plugin is used in the [snap framework] (http://github.com/intelsdi-x/snap).
+This plugin collects Cassandra cluster statistics with the [Snap Framework] (http://github.com/intelsdi-x/snap).
 
 
 1. [Getting Started](#getting-started)
@@ -27,29 +23,28 @@ In order to use this plugin you need the Cassandra node or cluster that you can 
 
 ### System Requirements
 
-* [snap](http://github.com/intelsdi-x/snap)
-* [snap-plugin-utilities](http://github.com/intelsdi-x/snap-plugin-utilities)
+* [Snap](http://github.com/intelsdi-x/snap)
 * Cassandra node/cluster
 * [golang 1.5+](https://golang.org/dl/)
+* [snap-plugin-utilities](http://github.com/intelsdi-x/snap-plugin-utilities)
 
-Note that Golang is needed only if building the plugin from the source.
+Note that Go and plugin utilities are needed only if building the plugin from source.
 
 ### Operating systems
-All OSs currently supported by snap:
+All OSs currently supported by Snap:
 * Linux/amd64
 * Darwin/amd64
 
 ### Installation
 
-### Install Cassandra from docker image
-```
-docker run --detach --name snap-cassandra -p 9042:9042 -p 7199:7199 -p 8082:8082 -p 9160:9160 -d candysmurfhub/cassandra
-```
+#### Download plugin binary:
+
+You can also download prebuilt binaries for OS X and Linux (64-bit) at the [releases](https://github.com/intelsdi-x/snap-plugin-collector-cassandra/releases) page
 
 #### To build the plugin binary:
 Get the source by running a `go get` to fetch the code:
 ```
-$ go get github.com/intelsdi-x/snap-plugin-collector-cassandra
+$ go get -d github.com/intelsdi-x/snap-plugin-collector-cassandra
 ```
 
 Build the plugin by running make within the cloned repo:
@@ -58,23 +53,19 @@ $ cd $GOPATH/src/github.com/intelsdi-x/snap-plugin-collector-cassandra && make
 ```
 This builds the plugin in `/build/rootfs/`
 
-#### Builds
-You can also download prebuilt binaries for OS X and Linux (64-bit) at the [releases](https://github.com/intelsdi-x/snap-plugin-collector-cassandra/releases) page
 
 ### Configuration and Usage
-* Set up the [snap framework](https://github.com/intelsdi-x/snap/blob/master/README.md#getting-started)
-* Ensure `$SNAP_PATH` is exported  
-`export SNAP_PATH=$GOPATH/src/github.com/intelsdi-x/snap/build`
 
-## Documentation
+* Set up the [Snap framework](https://github.com/intelsdi-x/snap/blob/master/README.md#getting-started).
 
-To learn more about this plugin:
+* Add Cassandra configuration information to the Task Manifest (see [examples](#examples))
 
-* [snap cassandra examples](#examples)
+* Load the plugin and create the task
+
+## Documentation 
 
 ### Collected Metrics
-This plugin has the ability to gather all metrics within cassandra org.apache.cassandra.metrics packge.
-View [Metric Types](./METRICS.md). They are in the following catalog:
+This plugin has the ability to gather all metrics within the Cassandra org.apache.cassandra.metrics package. View [Metric Types](./METRICS.md) for the full list. They are in the following catalog:
 
 **Cassandra Metric Catalog**
 * Cache (Counter, Row, Key)
@@ -92,14 +83,17 @@ View [Metric Types](./METRICS.md). They are in the following catalog:
 The dynamic metric queries are supported. You may view the [sample dynamic metrics](./DYNAMIC_METRICS.md).
 
 ### Examples
-Example running snap-plugin-collector-collector, passthru processor, and writing data to a file.
-User need to provide following parameters in the global configuration of the collector.
+Example running snap-plugin-collector-collector, passthru processor, and writing data to a file. User need to provide following parameters in the global configuration of the collector.
 
 * `"url"` - The domain URL of cassandra server (ex. `"192.168.99.100"`)
 * `"port"` - The port number of Cassandra MX4J (ex. `"8082"`)
 
-Refer to [Sample Gloabal Configuration](./examples/cfg/cfg.json)
+Refer to [Sample Gloabal Configuration](./examples/cfg/cfg.json).
 
+*Optional:* Run Cassandra from docker image:
+```
+docker run --detach --name snap-cassandra -p 9042:9042 -p 7199:7199 -p 8082:8082 -p 9160:9160 -d candysmurfhub/cassandra
+```
 ![Docker example](https://media.giphy.com/media/3osxY4vXZSyxYZG8eY/giphy.gif)
 
 In one terminal window, open the snap daemon (in this case with logging set to 1 and trust disabled):
@@ -229,24 +223,23 @@ $ tail -f collected_cassandra
 ### Roadmap
 This plugin is still in active development. As we launch this plugin, we have a few items in mind for the next few releases:
 - [ ] Additional error handling
-- [ ] Cluter load and scalability testing
+- [ ] Cluster load and scalability testing
 
 If you have a feature request, please add it as an [issue](https://github.com/intelsdi-x/snap-plugin-collector-cassandra/issues) 
-and/or submit a [pull request](https://github.com/intelsdi-x/snap-plugin-collector-cassandra/pulls).
+and feel free to submit a [pull request](https://github.com/intelsdi-x/snap-plugin-collector-cassandra/pulls) that resolves it.
 
 ## Community Support
-This repository is one of **many** plugins in the **snap**, a powerful telemetry agent framework. See the full project at 
-http://github.com/intelsdi-x/snap. To reach out to other users, head to the [main framework](https://github.com/intelsdi-x/snap#community-support).
-
+This repository is one of **many** plugins in **Snap**, the open telemetry framework. See the full project at http://github.com/intelsdi-x/snap. To reach out to other users, head to the [main framework](https://github.com/intelsdi-x/snap#community-support).
 
 ## Contributing
 We love contributions!
 
-There is more than one way to give back, from examples to blogs to code updates.
+There's more than one way to give back, from examples to blogs to code updates. See our recommended process in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+And **thank you!** Your contribution, through code and participation, is incredibly important to us.
 
 ## License
-
-[snap](http://github.com/intelsdi-x/snap), along with this plugin, is an Open Source software released under the Apache 2.0 [License](LICENSE).
+[Snap](http://github.com:intelsdi-x/snap), along with this plugin, is an Open Source software released under the Apache 2.0 [License](LICENSE).
 
 
 ## Acknowledgements
