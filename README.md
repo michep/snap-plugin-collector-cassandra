@@ -210,7 +210,6 @@ State: Running
 See file output (this is just part of the file):
 ```
 $ tail -f collected_cassandra
-```
 2016-06-04 10:34:38.477422325 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/RangeLatency/Max|0
 2016-06-04 10:34:38.477423472 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/CasProposeLatency/Max|0
 2016-06-04 10:34:38.47742462 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/TombstoneScannedHistogram/Max|0
