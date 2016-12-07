@@ -3,7 +3,7 @@ sudo: true
 language: go
 go:
 - 1.6.3
-- 1.7.1
+- 1.7.3
 services:
   - docker
 env:
@@ -45,7 +45,7 @@ deploy:
   on:
     repo: intelsdi-x/snap-plugin-collector-cassandra
     branch: master
-    condition: $TEST_TYPE = "build" && $TRAVIS_GO_VERSION = "1.7.1"
+    condition: $TEST_TYPE = "build" && $TRAVIS_GO_VERSION = "1.7.3"
 - provider: s3
   access_key_id: AKIAINMB43VSSPFZISAA
   secret_access_key:
@@ -59,7 +59,7 @@ deploy:
   on:
     repo: intelsdi-x/snap-plugin-collector-cassandra
     tags: true
-    condition: $TEST_TYPE = "build" && $TRAVIS_GO_VERSION = "1.7.1"
+    condition: $TEST_TYPE = "build" && $TRAVIS_GO_VERSION = "1.7.3"
 - provider: releases
   api_key:
     secure: Sq0NyCFeGT2cZybblM+9+RGAvJqfN+6cBAETgGIxMXcoGUF0mH/zyxym4cerDfRNBCDDC2aNIjRAgbTCf4Fxo7pRzY3wOqB/MlW1Vvzy5w+xLJ8SYOj9gOItJor6CVWcERby7MXVzpVJBURnfvk6lSJ9DbV2Gr2kxiwuMQWtCaX46zXPcsnirnbkGQ057klG5uATy4gEAgjacwdOdV8NZwa1osb+twqwwR3xNvX4Uwzs24fInmrnJs4vmZJgktQZ3NdzuKyRo2p30SCK536JYEvb5sBSQyCKIpcgNiZ2hYacSv3AjIvRfA1MiRuiK8dqg3tE1hEiQfuZcg77oH/txGLnfiGJL6LcoPMeLam4FTekV9ZLBegrF8JQLm0kxWa0esvMl8sSrhaiZy9bnZz4ek1kSQ4jmow2zqGtn1ubI+y/l3sh2cXT9H/vicVqMahN1nIWcwXCflnOJj/nUX/KSudSR8uzg4a3ewXbZVy4CX+2AJA7NbjwRHgQtBCp31pmnC28O3tXTDBavfVROMVgpHRiL0t9/BCYmYg9DaF/3owVIMqd+cK/GPITMBFsgZfZf3oCbUjfSun2CInB5mcJe708hJU1wPOTo6nYdizpjTnHXDZugdZg94Xhl0ux21p/wVlEUC0KQSFMzadPjplQk4zmAueAQNv6McwU4bLNrQk=
@@ -69,4 +69,4 @@ deploy:
   on:
     repo: intelsdi-x/snap-plugin-collector-cassandra
     tags: true
-    condition: $TEST_TYPE = "build" && $TRAVIS_GO_VERSION = "1.7.1"
+    condition: $TEST_TYPE = "build" && $TRAVIS_GO_VERSION = "1.7.3"
