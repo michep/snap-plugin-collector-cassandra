@@ -1,4 +1,4 @@
-# snap collector plugin - Cassandra
+# Snap collector plugin - Cassandra
 
 This plugin collects Cassandra cluster statistics with the [Snap Framework] (http://github.com/intelsdi-x/snap).
 
@@ -25,7 +25,7 @@ In order to use this plugin you need the Cassandra node or cluster that you can 
 
 * [Snap](http://github.com/intelsdi-x/snap)
 * Cassandra node/cluster
-* [golang 1.5+](https://golang.org/dl/)
+* [golang 1.6+](https://golang.org/dl/)
 * [snap-plugin-utilities](http://github.com/intelsdi-x/snap-plugin-utilities)
 
 Note that Go and plugin utilities are needed only if building the plugin from source.
@@ -51,7 +51,7 @@ Build the plugin by running make within the cloned repo:
 ```
 $ cd $GOPATH/src/github.com/intelsdi-x/snap-plugin-collector-cassandra && make
 ```
-This builds the plugin in `/build/rootfs/`
+This builds the plugin in `/build/`.
 
 
 ### Configuration and Usage
@@ -83,39 +83,28 @@ This plugin has the ability to gather all metrics within the Cassandra org.apach
 The dynamic metric queries are supported. You may view the [sample dynamic metrics](./DYNAMIC_METRICS.md).
 
 ### Examples
-Example running snap-plugin-collector-collector, passthru processor, and writing data to a file. User need to provide following parameters in the global configuration of the collector.
+Example running snap-plugin-collector-collector and writing data to a file. 
 
-* `"url"` - The domain URL of cassandra server (ex. `"192.168.99.100"`)
-* `"port"` - The port number of Cassandra MX4J (ex. `"8082"`)
-
-Refer to [Sample Gloabal Configuration](./examples/cfg/cfg.json).
-
-*Optional:* Run Cassandra from docker image:
+Run Cassandra from docker image:
 ```
 docker run --detach --name snap-cassandra -p 9042:9042 -p 7199:7199 -p 8082:8082 -p 9160:9160 -d candysmurfhub/cassandra
 ```
-![Docker example](https://media.giphy.com/media/3osxY4vXZSyxYZG8eY/giphy.gif)
 
-In one terminal window, open the snap daemon (in this case with logging set to 1 and trust disabled):
+Ensure [snap daemon is running](https://github.com/intelsdi-x/snap#running-snap):
 ```
-$ $SNAP_PATH/bin/snapd -l 1 -t 0 --config <path to global cfg.json>
+$ snapteld -l 1 -t 0 &
 ```
-In another terminal window:
-Load snap-plugin-collector-cassandra
+
+Download and load snap plugins:
 ```
-$ $SNAP_PATH/bin/snapctl plugin load <path to snap-plugin-collector-cassandra>
-Plugin loaded
-Name: cassandra
-Version: 1
-Type: collector
-Signed: false
-Loaded Time: Thu, 10 Mar 2016 22:31:34 PST
+$ snaptel plugin load snap-plugin-collector-cassandra
+$ snaptel plugin load snap-plugin-publisher-file
 ```
+
 See available metrics for your system (this is just part of the list)
 ```
-$SNAP_PATH/bin/snapctl metric list                                
+$snaptel metric list                                
 NAMESPACE 												 VERSIONS
-```
 /intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/scope/*/name/*/999thPercentile 		 3
 /intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/scope/*/name/*/99thPercentile 		 3
 /intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/scope/*/name/*/Count 			 3
@@ -126,7 +115,7 @@ NAMESPACE 												 VERSIONS
 /intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/75thPercentile 		 3
 ```
 
-$SNAP_PATH/bin/snapctl metric list --verbose
+$snaptel metric list --verbose
 ```
 /intel/cassandra/node/[Node Name]/org_apache_cassandra_metrics/type/[typeValue]/scope/[scopeValue]/name/[nameValue]/FiveMinuteRate 		 		 3 		 double
 /intel/cassandra/node/[Node Name]/org_apache_cassandra_metrics/type/[typeValue]/scope/[scopeValue]/name/[nameValue]/Max 			 		 3 		 double
@@ -135,89 +124,45 @@ $SNAP_PATH/bin/snapctl metric list --verbose
 /intel/cassandra/node/[Node Name]/org_apache_cassandra_metrics/type/[typeValue]/scope/[scopeValue]/name/[nameValue]/Min 			 		 3 		 double
 ```
 
-Load passthru plugin for processing:
+Create a task
 ```
-$SNAP_PATH/bin/snapctl plugin load $SNAP_PATH/plugin/snap-processor-passthru
-Plugin loaded
-Name: passthru
-Version: 1
-Type: processor
-Signed: false
-Loaded Time: Thu, 10 Mar 2016 22:33:45 PST
+$ snaptel task create -t cassandra-file.yml
+Using task manifest to create task
+Task created
+ID: 37cd9903-daf6-4e53-b15d-b9082666a830
+Name: Task-37cd9903-daf6-4e53-b15d-b9082666a830
+State: Running
 ```
+You may view [example tasks](https://github.com/intelsdi-x/snap-plugin-collector-cassandra/blob/master/examples/tasks/).
 
-Load file plugin for publishing:
+See the file output (this is just part of the file):
 ```
-$SNAP_PATH/bin/snapctl plugin load $SNAP_PATH/plugin/snap-publisher-file  
-Plugin loaded
-Name: file
-Version: 3
-Type: publisher
-Signed: false
-Loaded Time: Thu, 10 Mar 2016 22:34:28 PST
-```
-
-Create a task manifest file (e.g. `cassandra-collector-task.json`. replace node id):    
-```json
+$ tail -f collected_cassandra.log
 {
-    "version": 1,
-    "schedule": {
-        "type": "simple",
-        "interval": "1s"
-    },
-    "workflow": {
-        "collect": {
-            "metrics": {
-                "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/name/*/Value":{},
-                "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/50thPercentile": {},
-                "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/Max":{}
-            },
-            "config": {
-                "/intel/cassandra": {
-                    "url": "192.168.99.100",
-                    "port": 8082
-                }
-            },
-            "process": [
-                {
-                    "plugin_name": "passthru",
-                    "process": null,
-                    "publish": [
-                        {                         
-                            "plugin_name": "file",
-                            "config": {
-                                "file": "/tmp/collected_cassandra"
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    }
+  "timestamp": "2016-12-09T17:21:51.537472191-08:00",
+  "namespace": "/intel/cassandra/node/192.168.99.100/org.apache.cassandra.metrics/type/Table/keyspace/system_auth/scope/resource_role_permissons_index/name/CoordinatorReadLatency/Max",
+  "data": 0,
+  "unit": "float64",
+  "tags": {
+    "plugin_running_on": "egu-mac01.lan"
+  },
+  "version": 0,
+  "last_advertised_time": "2016-12-09T17:21:51.616846048-08:00"
+},
+{
+  "timestamp": "2016-12-09T17:21:51.537473191-08:00",
+  "namespace": "/intel/cassandra/node/192.168.99.100/org.apache.cassandra.metrics/type/Table/keyspace/system_auth/scope/resource_role_permissons_index/name/ViewReadTime/Max",
+  "data": 0,
+  "unit": "float64",
+  "tags": {
+    "plugin_running_on": "egu-mac01.lan"
+  },
+  "version": 0,
+  "last_advertised_time": "2016-12-09T17:21:51.616846191-08:00"
 }
 ```
 
-Create task:
-```
-$SNAP_PATH/bin/snapctl task create -t ~/task/cassandra-collector-task.json
-Using task manifest to create task
-Task created
-ID: 713bb201-eb69-407a-b11e-0d6606a444ca
-Name: Task-713bb201-eb69-407a-b11e-0d6606a444ca
-State: Running
-```
-
-See file output (this is just part of the file):
-```
-$ tail -f collected_cassandra
-2016-06-04 10:34:38.477422325 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/RangeLatency/Max|0
-2016-06-04 10:34:38.477423472 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/CasProposeLatency/Max|0
-2016-06-04 10:34:38.47742462 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/TombstoneScannedHistogram/Max|0
-2016-06-04 10:34:38.477425708 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/ReadLatency/Max|0
-2016-06-04 10:34:38.477426822 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/ViewReadTime/Max|0
-2016-06-04 10:34:38.477427958 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/scope/sessions/name/CoordinatorReadLatency/Max|0
-2016-06-04 10:34:38.477439374 -0700 PDT|/intel/cassandra/node/egu-mac01.lan/org.apache.cassandra.metrics/type/Table/keyspace/system_traces/sc
-```
+![Docker example](https://cloud.githubusercontent.com/assets/13841563/21120807/0427882a-c07e-11e6-944c-9b8cb46c9844.gif)
 
 ### Roadmap
 This plugin is still in active development. As we launch this plugin, we have a few items in mind for the next few releases:

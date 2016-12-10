@@ -13,24 +13,17 @@
             },
             "config": {
                 "/intel/cassandra": {
-                    "url": "192.168.99.100",
+                    "url": "cassandra host IP",
                     "port": 8082
                 }
             },
-            "process": [
-                {
-                    "plugin_name": "passthru",
-                    "process": null,
-                    "publish": [
-                        {                         
-                            "plugin_name": "file",
-                            "config": {
-                                "file": "/tmp/collected_cassandra"
-                            }
-                        }
-                    ]
-                }
-            ]
+           "publish": [
+            { "plugin_name": "file",
+              "config": {
+                "file": "/tmp/collected_cassandra.log"
+               }
+            }
+          ]
         }
     }
 }
