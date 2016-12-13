@@ -12,7 +12,7 @@ workflow:
       "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/scope/*/name/*/Min": {}
     config:
       "/intel/cassandra":
-        url: [cassandra host IP]
+        url: ${CASSANDRA_HOST_IP}
         port: 8082
     publish:
     - plugin_name: file

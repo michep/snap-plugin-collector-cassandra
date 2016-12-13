@@ -13,7 +13,7 @@
             },
             "config": {
                 "/intel/cassandra": {
-                    "url": "cassandra host IP",
+                    "url": "${CASSANDRA_HOST_IP}",
                     "port": 8082
                 }
             },
@@ -25,7 +25,7 @@
             },
             { "plugin_name": "influxdb",
                "config": {
-                    "host": "influx host IP",
+                    "host": "${INFLUX_HOST_IP}",
                     "port": 8086,
                     "database": "snap",
                     "user": "admin",

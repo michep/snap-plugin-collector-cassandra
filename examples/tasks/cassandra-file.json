@@ -13,7 +13,7 @@
             },
             "config": {
                 "/intel/cassandra": {
-                    "url": "cassandra host IP",
+                    "url": "${CASSANDRA_HOST_IP}",
                     "port": 8082
                 }
             },

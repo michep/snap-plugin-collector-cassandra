@@ -11,7 +11,7 @@ workflow:
       "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/Max": {}
     config:
       "/intel/cassandra":
-        url: [cassandra host IP]
+        url: ${CASSANDRA_HOST_IP}
         port: 8082
     publish:
     - plugin_name: file
@@ -19,7 +19,7 @@ workflow:
         file: "/tmp/collected_cassandra.log"
     - plugin_name: influxdb
       config:
-        host: [influx host IP]
+        host: ${INFLUX_HOST_IP}
         port: 8086
         database: snap
         user: admin

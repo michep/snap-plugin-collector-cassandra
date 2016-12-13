@@ -83,19 +83,19 @@ This plugin has the ability to gather all metrics within the Cassandra org.apach
 The dynamic metric queries are supported. You may view the [sample dynamic metrics](./DYNAMIC_METRICS.md).
 
 ### Examples
-Example running snap-plugin-collector-collector and writing data to a file. 
+Example running snap-plugin-collector-cassandra and writing data to a file. 
 
 Run Cassandra from docker image:
 ```
 docker run --detach --name snap-cassandra -p 9042:9042 -p 7199:7199 -p 8082:8082 -p 9160:9160 -d candysmurfhub/cassandra
 ```
 
-Ensure [snap daemon is running](https://github.com/intelsdi-x/snap#running-snap):
+Ensure [Snap daemon is running](https://github.com/intelsdi-x/snap#running-snap):
 ```
 $ snapteld -l 1 -t 0 &
 ```
 
-Download and load snap plugins:
+Download and load Snap plugins:
 ```
 $ snaptel plugin load snap-plugin-collector-cassandra
 $ snaptel plugin load snap-plugin-publisher-file
