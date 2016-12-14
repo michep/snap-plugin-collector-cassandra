@@ -1,0 +1,20 @@
+---
+version: 1
+schedule:
+  type: simple
+  interval: 2s
+workflow:
+  collect:
+    metrics:
+      "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/name/*/Value": {}
+      "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/50thPercentile": {}
+      "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/keyspace/*/scope/*/name/*/Max": {}
+      "/intel/cassandra/node/*/org_apache_cassandra_metrics/type/*/scope/*/name/*/Min": {}
+    config:
+      "/intel/cassandra":
+        url: ${CASSANDRA_HOST_IP}
+        port: 8082
+    publish:
+    - plugin_name: file
+      config:
+        file: "/tmp/collected_cassandra.log"
