@@ -1,12 +1,14 @@
-hash: 6289677f5844eee03ec8de8abd728d542f6e4215024d99da0b63fc55afe1673f
-updated: 2016-10-18T15:28:46.795471044-07:00
+hash: 99b1cb88b79ea1e4a2633e93d489cb3bd5bbcb9cd3ce7195611f1ccaacc5d0ee
+updated: 2017-10-31T01:50:15.531319239+08:00
 imports:
+- name: github.com/asaskevich/govalidator
+  version: 9699ab6b38bee2e02cd3fe8b99ecf67665395c96
 - name: github.com/gopherjs/gopherjs
   version: 4b53e1bddba0e2f734514aeb6c02db652f4c6fe8
   subpackages:
   - js
 - name: github.com/intelsdi-x/snap
-  version: d9b23fa9c62467de8709f121a331e9b2c479df5a
+  version: 79e1dd457d77c985491c2f4746cbc425fb3dc2dd
   subpackages:
   - control/plugin
   - control/plugin/cpolicy
@@ -17,6 +19,7 @@ imports:
   - core/ctypes
   - core/serror
   - pkg/ctree
+  - pkg/fileutils
   - pkg/schedule
   - pkg/stringutils
   - scheduler/wmap
@@ -28,6 +31,8 @@ imports:
   version: 8ddce2a84170772b95dd5d576c48d517b22cac63
 - name: github.com/robfig/cron
   version: 32d9c273155a0506d27cf73dd1246e86a470997e
+- name: github.com/sirupsen/logrus
+  version: be52937128b38f1d99787bb476c789e2af1147f1
 - name: github.com/Sirupsen/logrus
   version: be52937128b38f1d99787bb476c789e2af1147f1
 - name: github.com/smartystreets/assertions
