@@ -39,3 +39,6 @@ vendor/
 
 # ignore build artifacts
 build/
+
+.idea/
+cassandra/data/bak/

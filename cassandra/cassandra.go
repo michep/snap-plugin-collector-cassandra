@@ -25,7 +25,6 @@ import (
 
 	"github.com/intelsdi-x/snap/control/plugin"
 	"github.com/intelsdi-x/snap/control/plugin/cpolicy"
-	"github.com/intelsdi-x/snap/core"
 	"github.com/intelsdi-x/snap/core/cdata"
 )
 
@@ -74,6 +73,7 @@ func (p *Cassandra) CollectMetrics(mts []plugin.MetricType) ([]plugin.MetricType
 		}
 	}
 
+	ts := time.Now()
 	for _, m := range mts {
 		results := []nodeData{}
 		search := strings.Split(replaceUnderscoreToDot(strings.TrimLeft(m.Namespace().String(), "/")), "/")
@@ -83,12 +83,19 @@ func (p *Cassandra) CollectMetrics(mts []plugin.MetricType) ([]plugin.MetricType
 
 		for _, result := range results {
 			ns := append([]string{"intel", "cassandra", "node", p.client.host}, strings.Split(result.Path, Slash)...)
-			metrics = append(metrics, plugin.MetricType{
-				Namespace_: core.NewNamespace(ns...),
-				Timestamp_: time.Now(),
-				Data_:      result.Data,
-				Unit_:      reflect.TypeOf(result.Data).String(),
-			})
+			mt := plugin.MetricType{}
+			for i, n := range m.Namespace_ {
+				if n.Name != "" {
+					mt.Namespace_ = mt.Namespace().AddDynamicElement(n.Name, n.Description)
+					mt.Namespace_[i].Value = ns[i]
+				} else {
+					mt.Namespace_ = mt.Namespace().AddStaticElement(n.Value)
+				}
+			}
+			mt.Timestamp_ = ts
+			mt.Data_ = result.Data
+			mt.Unit_ = reflect.TypeOf(result.Data).String()
+			metrics = append(metrics, mt)
 		}
 	}
 
@@ -118,7 +125,7 @@ func (p *Cassandra) loadMetricAPI(config *cdata.ConfigDataNode) error {
 	// reads the root metric node from the memory
 	nod, err := readMetricAPI()
 	if err != nil {
-		err = p.client.buidMetricAPI()
+		err = p.client.buildMetricAPI()
 		if err != nil {
 			return err
 		}

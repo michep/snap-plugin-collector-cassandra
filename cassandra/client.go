@@ -25,8 +25,8 @@ import (
 	"io/ioutil"
 	"strings"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/intelsdi-x/snap/control/plugin"
+	log "github.com/sirupsen/logrus"
 )
 
 // const defines constant varaibles
@@ -100,6 +100,10 @@ func (cc *CassClient) getMetricType(cfg plugin.ConfigType) ([]plugin.MetricType,
 	return types, nil
 }
 
+func (cc *CassClient) BuildMetricType(cfg plugin.ConfigType) ([]plugin.MetricType, error) {
+	return cc.buildMetricType(cfg)
+}
+
 // buildMetricType builds all metric types and write them into
 // CassandraMetricType.json file.
 func (cc *CassClient) buildMetricType(cfg plugin.ConfigType) ([]plugin.MetricType, error) {
@@ -137,9 +141,13 @@ func (cc *CassClient) buildMetricType(cfg plugin.ConfigType) ([]plugin.MetricTyp
 	return mtsType, nil
 }
 
+func (cc *CassClient) BuidMetricAPI() error {
+	return cc.buildMetricAPI()
+}
+
 // buildMetricAPI builds the base searchable tree and write it
 // into CassandraMetricAPI.json file.
-func (cc *CassClient) buidMetricAPI() error {
+func (cc *CassClient) buildMetricAPI() error {
 	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + MetricQuery)
 	if err != nil {
 		return err

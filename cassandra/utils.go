@@ -8,10 +8,10 @@ import (
 	"os"
 	"strings"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/intelsdi-x/snap-plugin-utilities/config"
 	"github.com/intelsdi-x/snap/control/plugin"
 	"github.com/intelsdi-x/snap/core"
+	log "github.com/sirupsen/logrus"
 )
 
 // const defines constant varaibles
@@ -30,6 +30,10 @@ const (
 var (
 	cassLog = log.WithField("_module", "cass-collector-client")
 )
+
+func InitClient(cfg interface{}) (*CassClient, error) {
+	return initClient(cfg)
+}
 
 func initClient(cfg interface{}) (*CassClient, error) {
 	items, err := config.GetConfigItems(cfg, CassURL, Port)
@@ -156,7 +160,7 @@ func makeLitteralNamespace(url, name string) []string {
 
 // makeDynamicNamespace returns a dynamic namespace
 func makeDynamicNamespace(host, url, name string) core.Namespace {
-	ns := core.NewNamespace("intel", "cassandra", "node").AddDynamicElement("nodeName", "The name of a Cassandra node")
+	ns := core.NewNamespace("intel", "cassandra", "node").AddDynamicElement("node", "The name of a Cassandra node")
 
 	sp := strings.Split(replaceDotToUnderscore(url), ":")
 	ns = ns.AddStaticElement(sp[0])
@@ -165,7 +169,7 @@ func makeDynamicNamespace(host, url, name string) core.Namespace {
 	for _, s := range sp1 {
 		v := strings.Split(s, "=")
 		ns = ns.AddStaticElement(v[0])
-		ns = ns.AddDynamicElement(v[0]+" value", "The value of "+v[0])
+		ns = ns.AddDynamicElement(v[0], "The value of "+v[0])
 	}
 
 	if name != "" {

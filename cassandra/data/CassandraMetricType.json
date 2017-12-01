@@ -1,1 +1,4158 @@
-[{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"99thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"99thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"99thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"98thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Mean","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Max","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"FiveMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"75thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Count","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"long","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"OneMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"95thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"50thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"MeanRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Value","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"java.lang.Object","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"98thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"FiveMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Value","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"java.lang.Object","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"StdDev","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"FiveMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Min","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"FifteenMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Max","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"MeanRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Min","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"50thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Mean","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"OneMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Count","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"long","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"999thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Min","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"StdDev","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"path","Description":"","Name":""},{"Value":"*","Description":"The value of path","Name":"pathValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Count","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"long","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"50thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"999thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Value","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"java.lang.Object","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"OneMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"75thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"FifteenMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"999thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"path","Description":"","Name":""},{"Value":"*","Description":"The value of path","Name":"pathValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Value","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"java.lang.Object","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Max","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"98thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Mean","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Value","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"java.lang.Object","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"98thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"50thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"MeanRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"75thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"95thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"StdDev","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"OneMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Count","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"long","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"FiveMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"95thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"99thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Mean","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"95thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Max","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"75thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"MeanRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Min","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"Count","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"long","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"FifteenMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"FifteenMinuteRate","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"scope","Description":"","Name":""},{"Value":"*","Description":"The value of scope","Name":"scopeValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"StdDev","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"},{"namespace":[{"Value":"intel","Description":"","Name":""},{"Value":"cassandra","Description":"","Name":""},{"Value":"node","Description":"","Name":""},{"Value":"*","Description":"The name of a Cassandra node","Name":"Node Name"},{"Value":"org_apache_cassandra_metrics","Description":"","Name":""},{"Value":"type","Description":"","Name":""},{"Value":"*","Description":"The value of type","Name":"typeValue"},{"Value":"keyspace","Description":"","Name":""},{"Value":"*","Description":"The value of keyspace","Name":"keyspaceValue"},{"Value":"name","Description":"","Name":""},{"Value":"*","Description":"The value of name","Name":"nameValue"},{"Value":"999thPercentile","Description":"","Name":""}],"last_advertised_time":"0001-01-01T00:00:00Z","version":0,"config":null,"data":null,"tags":null,"Unit_":"double","description":"","timestamp":"0001-01-01T00:00:00Z"}]
+[
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "99thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "98thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Min",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Value",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "java.lang.Object",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "95thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "MeanRate",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "99thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "50thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Min",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "95thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "99thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Mean",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "98thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "50thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "99thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "StdDev",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "95thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "FifteenMinuteRate",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "75thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "75thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Value",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "java.lang.Object",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "75thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "999thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Min",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Min",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "999thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "StdDev",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Max",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "path",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of path",
+        "Name": "path"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Value",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "java.lang.Object",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "OneMinuteRate",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "MeanRate",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Max",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "95thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "50thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "FifteenMinuteRate",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "50thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "75thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Mean",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "98thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Count",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "path",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of path",
+        "Name": "path"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Count",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "FiveMinuteRate",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Mean",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Count",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Count",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "999thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "StdDev",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "999thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Mean",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Value",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "java.lang.Object",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "StdDev",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Value",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "java.lang.Object",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Count",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Max",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "Max",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "long",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "FiveMinuteRate",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "keyspace",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of keyspace",
+        "Name": "keyspace"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "98thPercentile",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  },
+  {
+    "namespace": [
+      {
+        "Value": "intel",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "cassandra",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "node",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The name of a Cassandra node",
+        "Name": "node"
+      },
+      {
+        "Value": "org_apache_cassandra_metrics",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "type",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of type",
+        "Name": "type"
+      },
+      {
+        "Value": "scope",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of scope",
+        "Name": "scope"
+      },
+      {
+        "Value": "name",
+        "Description": "",
+        "Name": ""
+      },
+      {
+        "Value": "*",
+        "Description": "The value of name",
+        "Name": "name"
+      },
+      {
+        "Value": "OneMinuteRate",
+        "Description": "",
+        "Name": ""
+      }
+    ],
+    "last_advertised_time": "0001-01-01T00:00:00Z",
+    "version": 0,
+    "config": null,
+    "data": null,
+    "tags": null,
+    "Unit_": "double",
+    "description": "",
+    "timestamp": "0001-01-01T00:00:00Z"
+  }
+]
