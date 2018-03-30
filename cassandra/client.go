@@ -27,6 +27,7 @@ import (
 
 	"github.com/intelsdi-x/snap/control/plugin"
 	log "github.com/sirupsen/logrus"
+	"fmt"
 )
 
 // const defines constant varaibles
@@ -124,12 +125,16 @@ func (cc *CassClient) buildMetricType(cfg plugin.ConfigType) ([]plugin.MetricTyp
 	}
 
 	nspace := map[string]plugin.MetricType{}
+	fmt.Println(len(mbeans))
+	a := 0
 	for _, mbean := range mbeans {
 		// mbean.Objectname represents each callable measurement
 		ns, _ := cc.getElementTypes(mbean.Objectname)
 		for _, n := range ns {
 			nspace[n.Namespace().String()] = n
 		}
+		fmt.Println(a)
+		a++
 	}
 
 	mtsType := []plugin.MetricType{}
