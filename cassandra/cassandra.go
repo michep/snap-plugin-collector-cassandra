@@ -49,7 +49,7 @@ const (
 
 // Meta returns the snap plug.PluginMeta type
 func Meta() *plugin.PluginMeta {
-	return plugin.NewPluginMeta(Name, Version, PluginType, []string{plugin.SnapGOBContentType}, []string{plugin.SnapGOBContentType})
+	return plugin.NewPluginMeta(Name, Version, PluginType, []string{plugin.SnapGOBContentType}, []string{plugin.SnapGOBContentType}, plugin.RoutingStrategy(plugin.StickyRouting))
 }
 
 // NewCassandraCollector returns a new instance of Cassandra struct
