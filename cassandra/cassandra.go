@@ -66,12 +66,12 @@ type Cassandra struct {
 func (p *Cassandra) CollectMetrics(mts []plugin.MetricType) ([]plugin.MetricType, error) {
 	metrics := []plugin.MetricType{}
 
-	if p.client == nil {
+	//if p.client == nil {
 		err := p.loadMetricAPI(mts[0].Config())
 		if err != nil {
 			return nil, err
 		}
-	}
+	//}
 
 	ts := time.Now()
 	for _, m := range mts {
