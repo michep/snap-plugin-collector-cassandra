@@ -22,6 +22,7 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
+	"net/url"
 	"strings"
 
 	log "github.com/sirupsen/logrus"
@@ -149,15 +150,33 @@ func (n *node) getSpecific(url, name string, names []string, index int, results 
 // addXMLAttibutes adds XML attributes into the tree
 func (n *node) addXMLAttibutes(ns string, attrs []XMLAttribute) {
 	for _, attr := range attrs {
-		if attr.Type != JavaStringType {
-
+		switch {
+		case attr.Type == JavaCompositeType:
 			nc, ok := n.Children[attr.Name]
 			if !ok {
+				nc = newNode(attr.Name)
+				//nc.Data = newNodeData(ns+Slash+attr.Name, attr.Value)
+				n.Children[attr.Name] = nc
+				nc.addCompositeElements(ns+Slash+attr.Name, attr.Value)
+			}
+
+		default:
+			nc, ok := n.Children[attr.Name]
+			if !ok && checkFloatValue(attr.Value) {
 				nc = newNode(attr.Name)
 				nc.Data = newNodeData(ns+Slash+attr.Name, attr.Value)
 				n.Children[attr.Name] = nc
 			}
 		}
+	}
+}
+
+func (n *node) addCompositeElements(ns string, coposite string) {
+	items := getCompositeItems(coposite)
+	for k, v := range items {
+		nc := newNode(k)
+		nc.Data = newNodeData(ns + Slash + k, v)
+		n.Children[k] = nc
 	}
 }
 
@@ -180,9 +199,9 @@ func (n *node) loadElements(url string) error {
 	return nil
 }
 
-func getResp(url, uri string) ([]XMLAttribute, error) {
-	client := NewHTTPClient(url, "", DefaultTimeout)
-	resp, err := client.httpClient.Get(url + MbeanQuery + uri + QuerySuffix)
+func getResp(u, uri string) ([]XMLAttribute, error) {
+	client := NewHTTPClient(u, "", DefaultTimeout)
+	resp, err := client.httpClient.Get(u + MbeanQuery + url.QueryEscape(uri) + QuerySuffix)
 	if err != nil {
 		cassLog.WithFields(log.Fields{
 			"_block": "getResp",

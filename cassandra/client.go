@@ -24,18 +24,24 @@ import (
 	"io"
 	"io/ioutil"
 	"strings"
+	"fmt"
+	"net/url"
+	"strconv"
 
 	"github.com/intelsdi-x/snap/control/plugin"
 	log "github.com/sirupsen/logrus"
-	"fmt"
 )
 
 // const defines constant varaibles
 const (
-	MetricQuery    = "/serverbydomain?querynames=org.apache.cassandra.metrics:*&template=identity"
+	MetricQuery    = "/serverbydomain?querynames=DOMAIN:*&template=identity"
 	MbeanQuery     = "/mbean?objectname="
 	QuerySuffix    = "&template=identity"
-	JavaStringType = "java.lang.String"
+	JavaCompositeType = "javax.management.openmbean.CompositeData"
+)
+
+var(
+	MetricDomains = []string{"org.apache.cassandra.metrics", "java.lang"}
 )
 
 // XMLServer represents Server element
@@ -67,7 +73,7 @@ type XMLAttribute struct {
 	XMLName xml.Name `xml:"Attribute"`
 	Name    string   `xml:"name,attr"`
 	Type    string   `xml:"type,attr"`
-	Value   float64  `xml:"value,attr"`
+	Value   string  `xml:"value,attr"`
 }
 
 // CassClient defines the URL of Cassandra
@@ -113,33 +119,36 @@ func (cc *CassClient) buildMetricType(cfg plugin.ConfigType) ([]plugin.MetricTyp
 		return nil, err
 	}
 
-	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + MetricQuery)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-
-	mbeans, err := readObjectname(resp.Body)
-	if err != nil {
-		return nil, err
-	}
-
-	nspace := map[string]plugin.MetricType{}
-	fmt.Println(len(mbeans))
-	a := 0
-	for _, mbean := range mbeans {
-		// mbean.Objectname represents each callable measurement
-		ns, _ := cc.getElementTypes(mbean.Objectname)
-		for _, n := range ns {
-			nspace[n.Namespace().String()] = n
-		}
-		fmt.Println(a)
-		a++
-	}
-
 	mtsType := []plugin.MetricType{}
-	for _, v := range nspace {
-		mtsType = append(mtsType, v)
+
+	for _, domain := range(MetricDomains) {
+		resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + strings.Replace(MetricQuery,"DOMAIN", domain, 1))
+		if err != nil {
+			return nil, err
+		}
+		defer resp.Body.Close()
+
+		mbeans, err := readObjectname(resp.Body)
+		if err != nil {
+			return nil, err
+		}
+
+		nspace := map[string]plugin.MetricType{}
+		fmt.Println(len(mbeans))
+		a := 0
+		for _, mbean := range mbeans {
+			// mbean.Objectname represents each callable measurement
+			ns, _ := cc.getElementTypes(mbean.Objectname)
+			for _, n := range ns {
+				nspace[n.Namespace().String()] = n
+			}
+			fmt.Println(a)
+			a++
+		}
+
+		for _, v := range nspace {
+			mtsType = append(mtsType, v)
+		}
 	}
 
 	writeMetricTypes(mtsType)
@@ -153,27 +162,30 @@ func (cc *CassClient) BuidMetricAPI() error {
 // buildMetricAPI builds the base searchable tree and write it
 // into CassandraMetricAPI.json file.
 func (cc *CassClient) buildMetricAPI() error {
-	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + MetricQuery)
-	if err != nil {
-		return err
-	}
 
-	mbeans, err := readObjectname(resp.Body)
-	if err != nil {
-		return err
-	}
+	for _, domain := range(MetricDomains) {
+		resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + strings.Replace(MetricQuery, "DOMAIN", domain, 1))
+		if err != nil {
+			return err
+		}
 
-	for _, mbean := range mbeans {
-		nodes := makeLitteralNamespace(mbean.Objectname, "")
-		cc.Root.Add(nodes, 0, mbean.Objectname)
+		mbeans, err := readObjectname(resp.Body)
+		if err != nil {
+			return err
+		}
+
+		for _, mbean := range mbeans {
+			nodes := makeLitteralNamespace(mbean.Objectname, "")
+			cc.Root.Add(nodes, 0, mbean.Objectname)
+		}
 	}
 	writeMetricAPIs(cc.Root)
 	return nil
 }
 
 // getElementTypes returns specific XML element namespace along with its unit
-func (cc *CassClient) getElementTypes(url string) ([]plugin.MetricType, error) {
-	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + MbeanQuery + url + QuerySuffix)
+func (cc *CassClient) getElementTypes(u string) ([]plugin.MetricType, error) {
+	resp, err := cc.client.httpClient.Get(cc.client.GetUrl() + MbeanQuery + url.QueryEscape(u) + QuerySuffix)
 	if err != nil {
 		cassLog.WithFields(log.Fields{
 			"_block": "getTypes",
@@ -195,11 +207,24 @@ func (cc *CassClient) getElementTypes(url string) ([]plugin.MetricType, error) {
 	attrs, _ := readXMLAttrbutes(contents)
 	ns := []plugin.MetricType{}
 	for _, attr := range attrs {
-		if attr.Type != JavaStringType {
-			ns = append(ns, plugin.MetricType{
-				Namespace_: makeDynamicNamespace(cc.host, url, attr.Name),
-				Unit_:      attr.Type,
-			})
+		switch {
+		case attr.Type == JavaCompositeType:
+			items := getCompositeItems(attr.Value)
+			if len(items) > 0 {
+				for _, item := range items {
+					ns = append(ns, plugin.MetricType{
+						Namespace_: makeDynamicNamespace(cc.host, u, attr.Name, item),
+						Unit_:      attr.Type,
+					})
+				}
+			}
+		default:
+			if checkFloatValue(attr.Value) {
+				ns = append(ns, plugin.MetricType{
+					Namespace_: makeDynamicNamespace(cc.host, u, attr.Name, ""),
+					Unit_:      attr.Type,
+				})
+			}
 		}
 	}
 	return ns, nil
@@ -244,4 +269,34 @@ func readXMLAttrbutes(content []byte) ([]XMLAttribute, error) {
 	var xmlAttributes XMLAttributes
 	xml.Unmarshal(content, &xmlAttributes)
 	return xmlAttributes.Attributes, nil
+}
+
+func checkFloatValue(val string) bool {
+	if _, err := strconv.ParseFloat(val, 64); err == nil {
+		return true
+	}
+	return false
+}
+
+func getCompositeItems(val string) map[string]string {
+	res := make(map[string]string)
+	s := strings.Index(val, "contents={")
+	if s > 0 {
+		s = s + 10
+		l := strings.Index(val[s:], "}")
+		if l > 0 {
+			l = l - 1
+			els := strings.Split(val[s:s+l], ",")
+			if len(els) > 0 {
+				for _, el := range els {
+					t := strings.Split(el, "=")
+					if len(t) == 2 && checkFloatValue(t[1]) {
+						res[strings.TrimSpace(t[0])] = t[1]
+					}
+				}
+			}
+		}
+	}
+
+	return res
 }

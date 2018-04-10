@@ -159,7 +159,7 @@ func makeLitteralNamespace(url, name string) []string {
 }
 
 // makeDynamicNamespace returns a dynamic namespace
-func makeDynamicNamespace(host, url, name string) core.Namespace {
+func makeDynamicNamespace(host, url, name string, item string) core.Namespace {
 	ns := core.NewNamespace("intel", "cassandra", "node").AddDynamicElement("node", "The name of a Cassandra node")
 
 	sp := strings.Split(replaceDotToUnderscore(url), ":")
@@ -174,6 +174,9 @@ func makeDynamicNamespace(host, url, name string) core.Namespace {
 
 	if name != "" {
 		ns = ns.AddStaticElement(name)
+	}
+	if item != "" {
+		ns = ns.AddStaticElement(item)
 	}
 	return ns
 }

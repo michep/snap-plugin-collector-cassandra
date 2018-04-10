@@ -99,7 +99,7 @@ func Test_CollectMetrics(t *testing.T) {
 	cfg := cdata.NewNode()
 	cfg.AddItem("url", ctypes.ConfigValueStr{Value: "pushtst00.mfms"})
 	cfg.AddItem("port", ctypes.ConfigValueInt{8081})
-	m := plugin.NewMetricType(makeNamespace2(), time.Now(), nil, "", nil)
+	m := plugin.NewMetricType(makeNamespace4(), time.Now(), nil, "", nil)
 	m.Config_ = cfg
 	mts = append(mts, *m)
 	cass := NewCassandraCollector()
@@ -118,7 +118,7 @@ func makeNamespace1() core.Namespace {
 	ns = ns.AddDynamicElement("scope", "scope")
 	ns = ns.AddStaticElement("name")
 	ns = ns.AddDynamicElement("name", "name")
-	ns = ns.AddStaticElement("Count")
+	ns = ns.AddStaticElement("99thPercentile")
 	return ns
 }
 
@@ -134,5 +134,32 @@ func makeNamespace2() core.Namespace {
 	ns = ns.AddStaticElement("name")
 	ns = ns.AddDynamicElement("name", "name")
 	ns = ns.AddStaticElement("Value")
+	ns[6].Value = "Table"
+	ns[8].Value = "pushserver"
+	ns[12].Value = "AllMemtablesLiveDataSize"
+	return ns
+}
+
+func makeNamespace3() core.Namespace {
+	ns := core.NewNamespace("intel", "cassandra", "node")
+	ns = ns.AddDynamicElement("node", "node")
+	ns = ns.AddStaticElements("java_lang", "type")
+	ns = ns.AddDynamicElement("type", "type")
+	ns = ns.AddStaticElement("HeapMemoryUsage")
+	ns = ns.AddStaticElement("used")
+	ns[6].Value = "Memory"
+	return ns
+}
+
+func makeNamespace4() core.Namespace {
+	ns := core.NewNamespace("intel", "cassandra", "node")
+	ns = ns.AddDynamicElement("node", "node")
+	ns = ns.AddStaticElements("java_lang", "type")
+	ns = ns.AddDynamicElement("type", "type")
+	ns = ns.AddStaticElement("name")
+	ns = ns.AddDynamicElement("name", "name")
+	ns = ns.AddStaticElement("CollectionTime")
+	ns[6].Value = "GarbageCollector"
+	ns[8].Value = "G1 Young Generation"
 	return ns
 }
