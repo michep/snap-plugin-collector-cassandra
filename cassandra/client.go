@@ -73,7 +73,7 @@ type XMLAttribute struct {
 	XMLName xml.Name `xml:"Attribute"`
 	Name    string   `xml:"name,attr"`
 	Type    string   `xml:"type,attr"`
-	Value   string  `xml:"value,attr"`
+	Value   string   `xml:"value,attr"`
 }
 
 // CassClient defines the URL of Cassandra

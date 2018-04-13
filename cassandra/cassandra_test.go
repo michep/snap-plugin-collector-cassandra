@@ -99,13 +99,13 @@ func Test_CollectMetrics(t *testing.T) {
 	cfg := cdata.NewNode()
 	cfg.AddItem("url", ctypes.ConfigValueStr{Value: "pushtst00.mfms"})
 	cfg.AddItem("port", ctypes.ConfigValueInt{8081})
-	m := plugin.NewMetricType(makeNamespace4(), time.Now(), nil, "", nil)
+	m := plugin.NewMetricType(makeNamespace1(), time.Now(), nil, "", nil)
 	m.Config_ = cfg
 	mts = append(mts, *m)
 	cass := NewCassandraCollector()
 	mts, _ = cass.CollectMetrics(mts)
 	fmt.Printf("%+v", len(mts))
-
+	fmt.Printf("%+v", mts[0])
 }
 
 

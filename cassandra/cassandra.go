@@ -19,13 +19,13 @@ limitations under the License.
 package cassandra
 
 import (
-	"reflect"
 	"strings"
 	"time"
 
 	"github.com/intelsdi-x/snap/control/plugin"
 	"github.com/intelsdi-x/snap/control/plugin/cpolicy"
 	"github.com/intelsdi-x/snap/core/cdata"
+	"strconv"
 )
 
 // const defines constant varaibles
@@ -93,8 +93,8 @@ func (p *Cassandra) CollectMetrics(mts []plugin.MetricType) ([]plugin.MetricType
 				}
 			}
 			mt.Timestamp_ = ts
-			mt.Data_ = result.Data
-			mt.Unit_ = reflect.TypeOf(result.Data).String()
+			mt.Data_, _ = strconv.ParseFloat(result.Data.(string), 64)
+			//mt.Unit_ = reflect.TypeOf(result.Data).String()
 			metrics = append(metrics, mt)
 		}
 	}
